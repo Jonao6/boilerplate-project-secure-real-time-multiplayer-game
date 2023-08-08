@@ -130,13 +130,13 @@ function drawUI() {
   context.fillRect(0, 0, canvas.width, upperCanvasHeight);
 
   context.fillStyle = COLORS.UI_TEXT;
-  context.font = '12px "Press Start 2P", cursive';
+  context.font = '10px "Press Start 2P", cursive';
   context.fillText(`${player.rank}/${player.rank.length}`, 515, 70);
   context.fillText(`Points:${points}`, 515, 35);
   context.fillText('Controls:WASD /', 10, 45);
-  context.fillText('Arrow', 115, 75);
+  context.fillText('Arrow', 100, 70);
   context.font = '22px "Press Start 2P", cursive';
-  context.fillText('Pac-SnakeMan', 225, 60);
+  context.fillText('Pac-SnakeMan', 210, 60);
 }
 
 function drawPlayer() {
