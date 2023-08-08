@@ -14,15 +14,6 @@ app.use(helmet({
   hidePoweredBy: { setTo: 'PHP 7.4.3' }
 }));
 app.use(helmet.noSniff());
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    defaultSrc: ["'self'"],
-    scriptSrc: ["'self'"],
-    styleSrc: ["'self'", "https://fonts.googleapis.com", "https://fonts.gstatic.com"],
-    fontSrc: ["'self'", "https://fonts.gstatic.com"]
-  }
-}));
-
 app.use(helmet.noCache());
 app.use('/public', express.static(process.cwd() + '/public'));
 app.use('/assets', express.static(process.cwd() + '/assets'));
